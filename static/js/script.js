@@ -167,3 +167,131 @@ window.addEventListener('load', () => {
         activateTimelineItems();
     }
 });
+
+
+// projects
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projectCards = document.querySelectorAll('.project-card');
+
+    function checkScroll() {
+        projectCards.forEach(card => {
+            const sectionPos = card.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos) {
+                card.classList.add('fade-in');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check
+});
+
+
+//skills
+
+document.addEventListener("DOMContentLoaded", function() {
+    const skillFills = document.querySelectorAll('.skill-fill');
+
+    function animateSkills() {
+        skillFills.forEach(skill => {
+            const sectionPos = skill.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos) {
+                skill.style.width = skill.dataset.percent;
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateSkills);
+    animateSkills(); // Initial check
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const infoBoxes = document.querySelectorAll('.info-box');
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('modal');
+    const modalMessage = document.getElementById('modal-message');
+    const closeButton = document.querySelector('.close-button');
+
+    // GSAP animations for info boxes
+    gsap.from('.info-box', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power2.out',
+        stagger: 0.3
+    });
+
+    // Form submit handler
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                showModal('Thank you for your message!');
+                form.reset();
+            } else {
+                showModal('Oops! There was a problem submitting your form');
+            }
+        })
+        .catch(error => {
+            showModal('Oops! There was a problem submitting your form');
+        });
+    });
+
+    // Modal handling
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    function showModal(message) {
+        modalMessage.textContent = message;
+        modal.style.display = 'flex';
+        gsap.from('.modal-content', {
+            opacity: 0,
+            y: -50,
+            duration: 0.5,
+            ease: 'power2.out'
+        });
+    }
+});
+
+
+
+// chat bot
+
+// Help Bot Functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const helpBotIcon = document.getElementById('helpBotIcon');
+    const helpBot = document.getElementById('helpBot');
+    const closeHelpBot = document.getElementById('closeHelpBot');
+
+    helpBotIcon.addEventListener('click', function() {
+        helpBot.style.display = 'flex';
+        helpBotIcon.style.display = 'none';
+    });
+
+    closeHelpBot.addEventListener('click', function() {
+        helpBot.style.display = 'none';
+        helpBotIcon.style.display = 'flex';
+    });
+});
