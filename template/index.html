@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Haran - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link class="fevi" rel="shortcut icon" href="/static/img/h.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo" style="color:#e6e6e6 ;">hari.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <!-- <li><a href="#experience">Experience</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="section visible">
+        <div class="intro">
+            <!-- <img src="{{ url_for('static', filename='img/avatar.png') }}" alt="Avatar" class="avatar"> -->
+            <h1>Hi There, 
+                I'm <span class="highlight">Hari Haran</span></h1>
+            <p>I Am Into <span class="highlight typing">Web Development</span></p>
+            <a href="#about" class="btn">About Me</a>
+           
+        </div>
+                <!-- Scroll Down Arrow -->
+                <a href="#about" id="scrollDown" class="scroll-down"><i class="fas fa-arrow-down"></i></a>
+
+    </section>
+
+
+
+    <!-- <section id="about" class="section">
+        <div class="container">
+            
+        <div class="about-content">
+            <h2 style="color:#0f0d0d">About Me</h2>
+            <p>Hello there, I'm Hariharan! I am a web developer with a passion for creating immersive and interactive web applications, as well as a graphic designer dedicated to visual excellence. Enthusiastic about application development and continually honing my coding skills.
+            Always seeking new experiences, eager to connect with professionals, and committed to absorbing knowledge from diverse sources.</p>
+        </div>
+        </div>
+    </section>  -->
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <h2 style="color:#0f0d0d" class="fade-in">About Me</h2>
+                <p class="fade-in-delay">Hello there, I'm Hariharan! I am a web developer with a passion for creating immersive and interactive web applications, as well as a graphic designer dedicated to visual excellence. Enthusiastic about application development and continually honing my coding skills. Always seeking new experiences, eager to connect with professionals, and committed to absorbing knowledge from diverse sources.</p>
+            
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/codehunterhari" target="_blank"><img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="LinkedIn"></a>
+                    <a href="https://github.com/CodeHunterHari" target="_blank"><img src="{{ url_for('static', filename='img/github.png') }}" alt="GitHub"></a>
+                    <a href="https://behance.com/haridesigns" target="_blank"><img src="{{ url_for('static', filename='img/behance.svg') }}" alt="Behance"></a>
+                    <a href="https://instagram.com/haridesigns.jpeg" target="_blank"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram"></a>   
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <section id="education" class="section">
+    <div class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline" id="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bachelor of Science in Computer Science</h3>
+                        <span class="timeline-date">2020 - 2023</span>
+                        <p class="timeline-description">Madurai Kamarajar University, Madurai</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Master of Science in Artificial Intelligence & Data Science</h3>
+                        <span class="timeline-date">2023 - 2025</span>
+                        <p class="timeline-description">Alagappa University, Karaikudi</p>
+                    </div>
+                </div>
+                <!-- Add more timeline items as needed -->
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    
+    
+    
+    
+    
+
+    <section id="projects" class="section">
+        
+        <div class="container">
+            <h2 class="projectt-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="/static/img/flipkart3.jpg" alt="Project 1" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Flipkart Review Extraction & Sentiment Analyser</h3>
+                        <p class="project-description">Providing insights into customer sentiments and feedback for better market understanding.</p>
+                        <p class="project-tools">Tools: Python Flask, Pandas, Numpy, NLTK & HTML, CSS</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/static/img/churn.png" alt="Project 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Intelligent Customer Retention Using ML for Enhanced Prediction of Telecom Churn</h3>
+                        <p class="project-description">Leveraging machine learning to predict and reduce customer churn in the telecom industry, enhancing retention strategies</p>
+                        <p class="project-tools">Tools: Python, Scikit-learn, Pandas, NumPy, Matplotlib, and Seaborn</p>
+                    </div>
+                </div>
+                
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="section">
+        <div class="skillshu">
+        <div class="container">
+            <h2 class="skills-title">Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-title">HTML</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-title">CSS</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-title">JavaScript</span>
+                        <span class="skill-percentage">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-title">Python</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-info">
+                        <span class="skill-title">Photoshop</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    
+
+   
+
+    
+
+    <!-- <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <p>This is the Experience section where you can list your professional experience.</p>
+        </div>
+    </section> -->
+
+    <section id="contact" class="section">
+        <div class="contact-container">
+        <div class="container">
+            <h2 class="contact-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-box">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <!-- <h3>Email</h3> -->
+                            <a href="mailto:hari2822haran@gmail.com"><p>hari2822haran@gmail.com</p></a>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <!-- <h3>Phone</h3> -->
+                            <p>+91 8870379008</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <!-- <h3>Location</h3> -->
+                            <p>  Madurai, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form id="contact-form" action="https://formspree.io/f/movaaryr" method="POST">
+                        <label for="name">
+                            <!-- <i class="fas fa-user"></i>  -->
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </label>
+                        
+                        <label for="email">
+                            <!-- <i class="fas fa-envelope"></i>  -->
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </label>
+                        
+                        <label for="message">
+                            <!-- <i class="fas fa-comment"></i>  -->
+                            <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        </label>
+                        
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+<!-- Help Bot -->
+    <!-- Help Bot -->
+    <div id="helpBot" class="help-bot">
+        <div id="helpBotHeader" class="help-bot-header">
+            <h4>Help Bot</h4>
+            <span id="closeHelpBot" class="close-help-bot">&times;</span>
+        </div>
+        <div id="helpBotContent" class="help-bot-content">
+            <p>Hello! How can I assist you?</p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p>If you want collobarate with me, contact me!</p>
+            <ul>
+                <li><a href="https://wa.me/+918870379008" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                <li><a href="https://github.com/CodeHunterHari" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/codehunterhari/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="helpBotIcon" class="help-bot-icon">
+        <i class="fas fa-question-circle"></i>
+    </div>
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Hari Haran. </p>
+    </footer>
+
+    <!-- Scroll to Top Arrow -->
+<a href="#" id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    
+<!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</body>
+</html>
